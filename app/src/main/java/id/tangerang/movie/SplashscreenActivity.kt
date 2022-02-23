@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
+import com.asepsoo.test.BlinkEffect
 import id.tangerang.movie.databinding.ActivitySplashscreenBinding
 import id.tangerang.movie.ui.list_movie.ListMovieActivity
 
@@ -22,9 +23,13 @@ class SplashscreenActivity : AppCompatActivity() {
             AnimationUtils.loadAnimation(context, R.anim.fade_in)
         )
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(context, ListMovieActivity::class.java))
-            finish()
-        }, 2000)
+        binding.btnTest.setOnClickListener {
+            BlinkEffect.blink(binding.btnTest)
+        }
+
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            startActivity(Intent(context, ListMovieActivity::class.java))
+//            finish()
+//        }, 2000)
     }
 }

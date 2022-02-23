@@ -23,4 +23,10 @@
         app:indicatorColor="@color/primaryLightColor"
         app:trackColor="@color/primaryDarkColor" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TEST" />
+
 </RelativeLayout>
